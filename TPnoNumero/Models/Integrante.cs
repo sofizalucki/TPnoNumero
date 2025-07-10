@@ -1,16 +1,30 @@
 namespace TPnoNumero.Models;
-
-public static class Integrante
+using Newtonsoft.Json;
+public class Integrante
 {
-    static public int IdIntegrante {get; private set;}
-    static public string nombreUser { get; private set; }
-    static public string password { get; private set; }
-    static public string nombre { get; private set; }
-    static public string apellido { get; private set; }
-    static public int DNI { get; private set; }
-    static public string direccion {get; private set;}
-    static public string barrio {get; private set;}
-}
-public void newIntegrante(string nombreUser, string password, string name, string surname, int DNI, string direccion, string barrio){
- new Integrante (nombreUser, password, name, surname, DNI, direccion, barrio);
+    [JsonProperty]
+     public int IdIntegrante {get; private set;}
+     [JsonProperty]
+     public string nombreUser { get; private set; }
+     [JsonProperty]
+     public string password { get; private set; }
+     [JsonProperty]
+     public string nombre { get; private set; }
+     [JsonProperty]
+     public string apellido { get; private set; }
+     [JsonProperty]
+     public int DNI { get; private set; }
+     [JsonProperty]
+     public string direccion {get; private set;}
+     [JsonProperty]
+     public string barrio {get; private set;}
+    public void Integrante(string nombreUser, string password, string name, string apellido, int DNI, string direccion, string barrio){
+        this.nombreUser = nombreUser;
+        this.password = password;
+        this.name = name;
+        this.apellido = apellido;
+        this.DNI = DNI;
+        this.direccion = direccion;
+        this.barrio = barrio;
+    }
 }
