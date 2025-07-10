@@ -17,4 +17,8 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult LogIn(){
+        ViewBag.exist = BD.LogInModel();
+        return View("Home");
+    }
 }
