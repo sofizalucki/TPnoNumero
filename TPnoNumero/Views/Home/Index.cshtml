@@ -1,2 +1,6 @@
 ﻿<h2> Bienvenidos al super tp sin numero.</h2>
 <a href='@Url.Action("LogIn")' >INICIA SESION SI TE DA</a>
+@if(ViewBag.exist){
+    <p>Perfecto ViewBag.name, bienvenido ¿Quieres ver tus datos?</p>
+    <a href='@Url.Action("LogIn")' >INICIA SESION SI TE DA</a>
+}

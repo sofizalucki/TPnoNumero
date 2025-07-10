@@ -14,6 +14,23 @@ body {
   padding: 10px;
 }
 
+.login{
+  background-color: hotpink;
+}
+
+.login h3{
+  color: coral;
+  font-size: xx-large;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: center;
+}
+.login form{
+  color: white;
+  font-size: medium;
+  font-style: italic;
+  text-align: center;
+}
 
 footer {
   margin-top: 10px;

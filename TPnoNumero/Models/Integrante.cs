@@ -11,3 +11,6 @@ public static class Integrante
     static public string direccion {get; private set;}
     static public string barrio {get; private set;}
 }
+public void newIntegrante(string nombreUser, string password, string name, string surname, int DNI, string direccion, string barrio){
+ new Integrante (nombreUser, password, name, surname, DNI, direccion, barrio);
+}
