@@ -4,10 +4,10 @@ using Dapper;
 
 namespace TPnoNumero.Models;
 
-public static class BD(){
+public static class BD{
     private static string _connectionString = @"Server=localhost;DataBase=TPnoNum;Integrated Security=True;TrustServerCertificate=True;";
 
-public static Integrante BuscarIntegrante(string nombreUser, string password, string name, string surname, int DNI, string direccion, string barrio)
+public static Integrante searchIntegrante(string nombreUser, string password)
 {
     Integrante integrante = null;
     using(SqlConnection connection = new SqlConnection(_connectionString))
@@ -19,14 +19,14 @@ public static Integrante BuscarIntegrante(string nombreUser, string password, st
 }
     public static void addIntegrante (Integrante integrante)
     {
-     string query = "INSERT INTO Integrante (nombreUser, password, name, apellido, DNI, direccion, barrio) " + "VALUES (@nombreUser, @password, @name, @apellido, @DNI, @direccion, @barrio)";
+     string query = "INSERT INTO Integrante (nombreUser, password, nombre, apellido, DNI, direccion, barrio) " + "VALUES (@nombreUser, @password, @nombre, @apellido, @DNI, @direccion, @barrio)";
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             connection.Execute(query, new
             {
                 nombreUser = integrante.nombreUser,
                 password = integrante.password,
-                name = integrante.name,
+                nombre = integrante.nombre,
                 DNI = integrante.DNI,
                 apellido = integrante.apellido,
                 direccion = integrante.direccion,

@@ -10,7 +10,7 @@
   },
   "profiles": {
     "http": {
-      "commandName": "Project",
+      "commandnombre": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5088",
@@ -19,7 +19,7 @@
       }
     },
     "https": {
-      "commandName": "Project",
+      "commandnombre": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7290;http://localhost:5088",
@@ -28,7 +28,7 @@
       }
     },
     "IIS Express": {
-      "commandName": "IISExpress",
+      "commandnombre": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

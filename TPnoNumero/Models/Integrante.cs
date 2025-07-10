@@ -18,10 +18,10 @@ public class Integrante
      public string direccion {get; private set;}
      [JsonProperty]
      public string barrio {get; private set;}
-    public void Integrante(string nombreUser, string password, string name, string apellido, int DNI, string direccion, string barrio){
+    public Integrante(string nombreUser, string password, string nombre, string apellido, int DNI, string direccion, string barrio){
         this.nombreUser = nombreUser;
         this.password = password;
-        this.name = name;
+        this.nombre = nombre;
         this.apellido = apellido;
         this.DNI = DNI;
         this.direccion = direccion;

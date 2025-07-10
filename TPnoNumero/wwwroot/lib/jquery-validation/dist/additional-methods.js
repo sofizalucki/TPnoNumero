@@ -599,7 +599,7 @@ $.validator.addMethod( "creditcardtypes", function( value, element, param ) {
  *  currency: ["$", false]
  *  currency: ["RM", false] - also works with text based symbols such as "RM" - Malaysia Ringgit etc
  *
- *  <input class="currencyInput" name="currencyInput">
+ *  <input class="currencyInput" nombre="currencyInput">
  *
  * Soft symbol checking
  *  currencyInput: {
@@ -648,10 +648,10 @@ $.validator.addMethod( "dateFA", function( value, element ) {
  * @example $.validator.methods.date("01.01.1900")
  * @result false
  *
- * @example <input name="pippo" class="{dateITA:true}" />
+ * @example <input nombre="pippo" class="{dateITA:true}" />
  * @desc Declares an optional input element whose value must be a valid date.
  *
- * @name $.validator.methods.dateITA
+ * @nombre $.validator.methods.dateITA
  * @type Boolean
  * @cat Plugins/Validate/Methods
  */
@@ -1151,7 +1151,7 @@ $.validator.addMethod( "nowhitespace", function( value, element ) {
 * @example $.validator.methods.pattern("BR1004",element,/^AR\d{4}$/)
 * @result false
 *
-* @name $.validator.methods.pattern
+* @nombre $.validator.methods.pattern
 * @type Boolean
 * @cat Plugins/Validate/Methods
 */
@@ -1269,7 +1269,7 @@ $.validator.addMethod( "postalcodeBR", function( cep_value, element ) {
  * @example jQuery.validator.methods.postalCodeCA( "H0H0H0", element )
  * @result false
  *
- * @name jQuery.validator.methods.postalCodeCA
+ * @nombre jQuery.validator.methods.postalCodeCA
  * @type Boolean
  * @cat Plugins/Validate/Methods
  */
@@ -1296,8 +1296,8 @@ $.validator.addMethod( "postcodeUK", function( value, element ) {
  *
  * The end result is that neither of these inputs:
  *
- *	<input class="productinfo" name="partnumber">
- *	<input class="productinfo" name="description">
+ *	<input class="productinfo" nombre="partnumber">
+ *	<input class="productinfo" nombre="description">
  *
  *	...will validate unless at least one of them is filled.
  *
@@ -1335,9 +1335,9 @@ $.validator.addMethod( "require_from_group", function( value, element, options )
  *
  * The end result, is that none of these inputs:
  *
- *	<input class="productinfo" name="partnumber">
- *	<input class="productinfo" name="description">
- *	<input class="productinfo" name="color">
+ *	<input class="productinfo" nombre="partnumber">
+ *	<input class="productinfo" nombre="description">
+ *	<input class="productinfo" nombre="color">
  *
  *	...will validate unless either at least two of them are filled,
  *	OR none of them are.
@@ -1451,10 +1451,10 @@ $.validator.addMethod( "url2", function( value, element ) {
  *
  * Works with all kind of text inputs.
  *
- * @example <input type="text" size="20" name="VehicleID" class="{required:true,vinUS:true}" />
+ * @example <input type="text" size="20" nombre="VehicleID" class="{required:true,vinUS:true}" />
  * @desc Declares a required input element whose value must be a valid vehicle identification number.
  *
- * @name $.validator.methods.vinUS
+ * @nombre $.validator.methods.vinUS
  * @type Boolean
  * @cat Plugins/Validate/Methods
  */

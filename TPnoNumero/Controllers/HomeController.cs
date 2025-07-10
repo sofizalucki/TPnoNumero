@@ -18,8 +18,8 @@ public class HomeController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult LogIn(string name, string answer){
-        if(BD.LogInModel(name, answer)){
+    public IActionResult LogIn(string nombre, string answer){
+        if(BD.searchIntegrante(nombre, answer) != null){
             return View("Profile");
         }
         else{
@@ -27,11 +27,15 @@ public class HomeController : Controller
         }
         
     }
+    public IActionResult aLogIn(){
+           return View("LogIn");
+    }
+        
     [HttpPost]
-    public IActionResult createNew(string nombreUser, string password, string name, string surname, int DNI, string direccion, string barrio){
-        Integrante nuevoIntegrante = Integrante.newIntegrante(nombreUser, password, name, surname, DNI, direccion, barrio);
+    public IActionResult createNew(string nombreUser, string password, string nombre, string surnombre, int DNI, string direccion, string barrio){
+        Integrante nuevoIntegrante = new Integrante(nombreUser, password, nombre, surnombre, DNI, direccion, barrio);
         BD.addIntegrante(nuevoIntegrante);
         return View("Index");
     }
-    
 }
+    
