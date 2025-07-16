@@ -30,6 +30,9 @@ public class HomeController : Controller
     public IActionResult aLogIn(){
            return View("LogIn");
     }
+    public IActionResult aNewIntegrante(){
+           return View("newIntegrante");
+    }
         
     [HttpPost]
     public IActionResult createNew(string nombreUser, string password, string nombre, string surnombre, int DNI, string direccion, string barrio){

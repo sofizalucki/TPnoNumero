@@ -17,19 +17,26 @@ body {
 .login{
   background-color: hotpink;
 }
-
+.login div{
+  display: flex;
+  justify-content: center;
+}
 .login h3{
-  color: coral;
+  color: aquamarine;
   font-size: xx-large;
-  text-decoration: underline;
   font-weight: bold;
   text-align: center;
 }
 .login form{
-  color: white;
+  color: hotpink;
   font-size: medium;
   font-style: italic;
   text-align: center;
+  border-radius: 20px;
+  background-color: aquamarine;
+  padding: 1%;
+  margin: 2%;
+  width: 30%;
 }
 .nuevoIntegrante{
   background-color: hotpink;
@@ -42,10 +49,28 @@ body {
   text-align: center;
 }
 
-footer {
-  margin-top:10px;
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-top: 1px solid #e9ecef;
-}
 
+
+.index{
+  width: 100%;
+  background-color: hotpink;
+  padding: 2%;
+}
+.index h2 {
+ color: aquamarine;
+}
+.index div{ 
+  display: flex;
+  justify-content: center;
+}
+.index a{
+  border-radius: 20px;
+  background-color: aquamarine;
+  padding: 1%;
+  text-decoration: none;
+  color: hotpink;
+  margin: 1%;
+}
+.index a:hover{
+  box-shadow: 1px 1px 10px aquamarine;
+}
