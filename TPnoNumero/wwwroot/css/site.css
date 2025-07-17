@@ -12,11 +12,13 @@ html {
 body {
   background:cover ;
 }
-.login img{
-  /* display: flex;
-  justify-content: center; */
+ a{
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
+  text-decoration: none;
+  color: aquamarine;
 }
 .login{
   background-color: hotpink;

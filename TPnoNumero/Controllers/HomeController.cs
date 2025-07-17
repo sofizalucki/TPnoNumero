@@ -18,14 +18,16 @@ public class HomeController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult LogIn(string nombre, string answer){
-        if(BD.searchIntegrante(nombre, answer) != null){
+   public IActionResult LogIn(string nombreUser, string password)
+    {
+        if (BD.searchIntegrante(nombreUser, password) != null)
+        {
             return View("Profile");
         }
-        else{
+        else
+        {
             return View("Index");
         }
-        
     }
     public IActionResult aLogIn(){
            return View("LogIn");
