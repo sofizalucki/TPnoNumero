@@ -33,12 +33,5 @@ public class HomeController : Controller
     public IActionResult aNewIntegrante(){
            return View("newIntegrante");
     }
-        
-    [HttpPost]
-    public IActionResult createNew(string nombreUser, string password, string nombre, string surnombre, int DNI, string direccion, string barrio){
-        Integrante nuevoIntegrante = new Integrante(nombreUser, password, nombre, surnombre, DNI, direccion, barrio);
-        BD.addIntegrante(nuevoIntegrante);
-        return View("Index");
-    }
 }
     
