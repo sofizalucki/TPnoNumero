@@ -12,6 +12,8 @@ public static Integrante searchIntegrante(string nombreUser, string password)
     Integrante integrante = null;
     using(SqlConnection connection = new SqlConnection(_connectionString))
     {
+        Console.WriteLine("usuario " + nombreUser);
+        Console.WriteLine("contraseña " + password);
         string query = "SELECT * FROM Integrante WHERE nombreUser = @nombreUser AND password = @password";
         integrante = connection.QueryFirstOrDefault<Integrante>(query, new { nombreUser = nombreUser, password = password });
     }

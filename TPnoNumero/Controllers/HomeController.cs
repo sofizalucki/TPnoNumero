@@ -17,15 +17,25 @@ public class HomeController : Controller
     {
         return View();
     }
-    [HttpPost]
-   public IActionResult LogIn(string nombreUser, string password)
+        [HttpPost]
+    public IActionResult LogIn(string nombreUser, string password)
     {
-        if (BD.searchIntegrante(nombreUser, password) != null)
+        _logger.LogInformation($"Intento de login: {nombreUser} - {password}");
+        Integrante inte = BD.searchIntegrante(nombreUser, password);
+        if (inte != null)
         {
+            @ViewBag.DNI = inte.DNI;
+            @ViewBag.direction = inte.direccion;
+            @ViewBag.Neighborhood = inte.barrio;
+            @ViewBag.nombreCompleto = inte.nombre + inte.apellido;
+            @ViewBag.password = inte.password;
+            @ViewBag.nombreUser = inte.nombreUser;
+            @ViewBag.nombre = inte.nombre;
             return View("Profile");
         }
         else
         {
+            @ViewBag.message = "El usuario o la contraseña son incorrectos";
             return View("Index");
         }
     }
@@ -34,6 +44,9 @@ public class HomeController : Controller
     }
     public IActionResult aNewIntegrante(){
            return View("newIntegrante");
+    }
+    public IActionResult aHome(){
+        return View ("Index");
     }
 }
     

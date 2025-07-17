@@ -27,4 +27,8 @@ public class Integrante
         this.direccion = direccion;
         this.barrio = barrio;
     }
+
+    public Integrante(){
+        
+    }
 }

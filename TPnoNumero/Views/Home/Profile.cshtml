@@ -1,12 +1,15 @@
 <section class = Profile>
 <h2>Bienvenido @ViewBag.nombre . Estos son tus datos personales:</h2>
-<ul>
-    <li>Nombre de usuario: @ViewBag.nombreUser</li>
-    <li>Contraseña: @ViewBag.password</li>
-    <li>Nombre y apellido: @ViewBag.nombre @ViewBag.surnombre</li>
-    <li>DNI: @ViewBag.DNI</li>
-    <li>Direccion: @ViewBag.direction</li>
-    <li>Barrio: @ViewBag.Neighborhoodigh</li>
-</ul>
-<a href="Index.html">Home</a>
+
+<div>
+    <ul>
+        <li>Nombre de usuario: @ViewBag.nombreUser</li><br/>
+        <li>Contraseña: @ViewBag.password</li><br/>
+        <li>Nombre y apellido: @ViewBag.nombreCompleto</li><br/>
+        <li>DNI: @ViewBag.DNI</li><br/>
+        <li>Direccion: @ViewBag.direction</li><br/>
+        <li>Barrio: @ViewBag.Neighborhood</li><br/>
+    </ul>
+</div>
+<a href='@Url.Action("aHome", "Home")' >Home</a>
 </section>
